@@ -1,0 +1,249 @@
+/* COLORS ==================================================== */
+.colors {
+    background-color: #001e1d;
+    background-color: #004643;
+    background-color: #abd1c6;
+    background-color: #e8e4e6;
+    background-color: #fffffe;
+    background-color: #f9bc60;
+    background-color: #e16162;
+}
+
+/* .hidden {
+    display: none;
+} */
+
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 125%;
+    background-color: #004643;
+}
+
+/* NAV ===================================================== */
+
+.colapsed-logo, .expanded-code {
+    font-size: 3rem;
+    color: #f9bc60;;
+}
+
+.expanded-logo {
+    font-size: 3rem;
+    color: #004643;
+}
+
+.expanded {
+    background-image: linear-gradient(to left, #f9bc60,#004643);
+}
+
+/* NAV ANIMATION  ================================================ */
+.expanded {
+    top: 0rem;
+    width: 100%;
+    position: fixed;
+    transition: 0.5s;
+    left: 100%;
+}
+
+/* - when clicked - .active  */
+    .expanded.active {
+        left: 0;
+        z-index: 99;
+    }
+
+.expanded a {
+    color: #fffffe;
+    font-size: 2rem;
+}
+
+.reponsive-nav ul {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-end;
+    font-size: 1.3rem;
+    padding-top: 0.5rem;
+}
+
+.reponsive-nav ul a {
+    color: #f9bc60;
+}
+
+a {
+    text-decoration: none;
+    color: #001e1d;
+}
+ul li {
+    list-style: none;
+}
+
+/* BUTTONS (and headings) ======================================= */
+
+.btn, .btn a, button, h3, h4, h6 {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 1rem;
+    color: #001e1d;
+}
+
+.btn.text-center, .btn {
+    background-color: #f9bc60;
+}
+
+.top-btn {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #001e1d;
+    padding: 0 2rem 2rem 0;
+}
+
+/* HEADER ========================================= */
+
+/* header, article {
+    background-color: #004643;
+} */
+
+.heading-wrap {
+    background: linear-gradient(to bottom, rgba(0,70,67, 0.7), rgba(0,70,67, 0.9)), url("../images/hero-3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header {
+    font-size: 1.5rem;
+    color:#fffffe;
+}
+
+/* SERVICES ====================================== */
+
+#services, #services *  {
+    background-color: #abd1c6;
+    color: #004643;
+}
+
+#services h3 {
+    font-size: 2rem;
+}
+
+.service-sections img {
+    max-width: 10rem;
+}
+
+.cite, .cite p {
+    font-size: 0.7rem;
+    color: #abd1c6;
+    padding-top: 0;
+}
+ 
+/* TEAM =========================================== */
+
+.team {
+    background-color: #004643;
+    color: #e8e4e6;
+}
+
+.team i, .team h3 {
+    color: #f9bc60;
+}
+
+.team h5, .skills h4 {
+    color: #e16162;
+}
+
+/* SKILLS ============================================ */
+
+.skills {
+    background-color: #fffffe;
+    color: #004643;
+}
+
+/* CONTACTS ========================================= */
+
+#contacts {
+    background-color:#001e1d;
+    color: #fffffe;
+}
+
+a.tel, #contacts h3 {
+    color:#f9bc60;
+}
+
+.form-control, textarea {
+    background-color: #004643;
+    color: #fffffe;
+}
+
+::placeholder, .form-control::placeholder {
+    color:#abd1c6;
+}
+
+/*  FOOTER ============================================== */
+
+footer .navbar {
+    background-color: #004643;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #f9bc60;
+}
+
+/* HOVERS =================================================== */
+button:hover, .btn:hover {
+    background-color:#e16162;
+    color: #001e1d;
+}
+
+.reponsive-nav a:hover, i.fa-code:hover, i.fa-burger:hover, i.expanded-logo:hover, .expanded ul li a:hover, a.tel:hover, .team i:hover {
+    cursor: pointer;
+    color: #e16162;
+    transform: scale(1.2);
+} 
+
+.reponsive-nav a, i.fa-code, i.fa-burger, i.expanded-logo, .expanded ul li a, a.tel, button, .btn {
+    transition: all 0.5s ease-in-out;  
+} 
+
+img, .team i {
+    transition: all 0.4s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.2);
+    color: #e16162;
+}
+
+
+/* MEDIA QUERIES ================================================ */
+@media screen and (min-width: 901px) {
+    .fa-burger {
+        display: none;
+    }
+    .heading-wrap {
+        padding-top: 5rem;
+    }
+}
+
+  @media screen and (max-width: 900px) {
+    .collapsed-nav .reponsive-nav ul {
+        display: none;
+    }
+    #contacts input, #contacts textarea, #contacts p, .navbar-nav .nav-item .nav-link {
+        font-size: 1.2rem;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+      html, body {
+          font-size: 100%;
+      }
+      form .container .row {
+          display:flex;
+          flex-direction: column;
+      }
+      #contacts input, #contacts textarea, #contacts p, .navbar-nav .nav-item .nav-link {
+        font-size: 0.7rem;
+        padding: 0.5rem;
+      }
+      p.header {
+          font-size: 1rem;
+      }
+  }
